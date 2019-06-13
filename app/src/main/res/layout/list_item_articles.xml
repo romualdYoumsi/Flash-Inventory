@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:paddingStart="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_itemarticle_color_show"
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_itemarticle_intitule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@color/colorBlack"
+                    tools:text="Intitulé Article"/>
+
+                <TextView
+                    android:id="@+id/tv_itemarticle_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    tools:text="335 en stock  •  Prix de revient 4800 XAF"/>
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_itemarticle_statut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:textColor="@color/colorGreen"
+                tools:text="PRESENT"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_chevron_right_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

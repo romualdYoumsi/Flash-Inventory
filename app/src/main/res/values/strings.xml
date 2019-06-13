@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Flash Inventory</string>
+
+    <string name="title_choose_file">Veuillez choisir un fichier au format *.csv</string>
+    <string name="annuler">Annuler</string>
+
+    <string name="present">Présent</string>
+    <string name="absent">Absent</string>
+    <string name="articles">Articles</string>
+    <string name="inventaire">Inventaires</string>
+    <string name="ajouter_inventaire">Ajouter Inventaire</string>
+
+    <string name="champs_invalide">Champs invalide</string>
+    <string name="details_article">Détails Article</string>
+    <string name="veuillez_scanner_zone">Veuillez scanner la zone.</string>
+</resources>
