@@ -139,7 +139,8 @@ public class AjouterInventaireActivity extends AppCompatActivity implements Zone
 
         EditText codeBarreET = (EditText) alertLayout.findViewById(R.id.et_newarticle_codebarre);
         final EditText codeET = (EditText) alertLayout.findViewById(R.id.et_newarticle_code);
-        final EditText intituleET = (EditText) alertLayout.findViewById(R.id.et_newarticle_intitule);
+        final EditText desgnationET = (EditText) alertLayout.findViewById(R.id.et_newarticle_designation);
+        final EditText marqueET = (EditText) alertLayout.findViewById(R.id.et_newarticle_marque);
         final EditText prixRevientET = (EditText) alertLayout.findViewById(R.id.et_newarticle_prixrevient);
         final EditText quantiteET = (EditText) alertLayout.findViewById(R.id.et_newarticle_quantite);
         Button annulerBTN = (Button) alertLayout.findViewById(R.id.btn_newarticle_annuler);
@@ -171,7 +172,7 @@ public class AjouterInventaireActivity extends AppCompatActivity implements Zone
         enregitrerBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e(TAG, "onClick: intituleET="+intituleET.getText().toString() );
+                Log.e(TAG, "onClick: desgnationET="+desgnationET.getText().toString() );
 
                 int quantite = 1;
                 double prix_revient = 0;
@@ -189,7 +190,8 @@ public class AjouterInventaireActivity extends AppCompatActivity implements Zone
                 articleEntryInsert.setStatut(getResources().getString(R.string.absent));
                 articleEntryInsert.setCode_article(codeET.getText().toString());
                 articleEntryInsert.setCode_barre(barCodeArticle);
-                articleEntryInsert.setIntitule(intituleET.getText().toString());
+                articleEntryInsert.setIntitule(desgnationET.getText().toString());
+                articleEntryInsert.setMarque(marqueET.getText().toString());
 
                 Long articleId = mDb.articleDao().insertArticle(articleEntryInsert);
                 ZoneLineEntry zoneLineEntry = new ZoneLineEntry();

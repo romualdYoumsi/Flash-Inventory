@@ -102,6 +102,9 @@ public class ParserWriteXlsTask extends AsyncTask<Void, Void, String> {
         cPresent = rowPresent.createCell(4);
         cPresent.setCellValue("Zone");
 
+        cPresent = rowPresent.createCell(5);
+        cPresent.setCellValue("Marque");
+
         XSSFRow rowAbsent = sheetAbsent.createRow(0);
 //            Generation des cellules
         cAbsent = rowPresent.createCell(0);
@@ -118,6 +121,12 @@ public class ParserWriteXlsTask extends AsyncTask<Void, Void, String> {
 
         cAbsent = rowAbsent.createCell(4);
         cAbsent.setCellValue("Zone");
+
+        cAbsent = rowAbsent.createCell(5);
+        cAbsent.setCellValue("Désignation");
+
+        cAbsent = rowAbsent.createCell(5);
+        cAbsent.setCellValue("Marque");
 
 //        Generation lignes article presents
         for (int i = 0; i < articleEntriesPresent.size(); i++) {
@@ -139,6 +148,12 @@ public class ParserWriteXlsTask extends AsyncTask<Void, Void, String> {
 //            le statut ici represente la zone de l'article
             cPresent = row.createCell(4);
             cPresent.setCellValue(""+articleEntry.getStatut());
+
+            cPresent = row.createCell(5);
+            cPresent.setCellValue(""+articleEntry.getIntitule());
+
+            cPresent = row.createCell(6);
+            cPresent.setCellValue(""+articleEntry.getMarque());
         }
 //        Generation lignes article absents
         for (int i = 0; i < articleEntriesAbsent.size(); i++) {
@@ -159,6 +174,12 @@ public class ParserWriteXlsTask extends AsyncTask<Void, Void, String> {
 
             cAbsent = row.createCell(4);
             cAbsent.setCellValue(""+articleEntry.getStatut());
+
+            cAbsent = row.createCell(5);
+            cAbsent.setCellValue(""+articleEntry.getIntitule());
+
+            cAbsent = row.createCell(6);
+            cAbsent.setCellValue(""+articleEntry.getMarque());
         }
 
         // Create a path where we will place our List of objects on external storage

@@ -79,13 +79,13 @@ public class ParserWriteTxtTask extends AsyncTask<Void, Void, String> {
         for (int i = 0; i < articleEntriesPresent.size(); i++) {
             ArticleEntry articleEntry = articleEntriesPresent.get(i);
 //            Log.e(TAG, "doInBackground: statut:"+articleEntry.getStatut());
-            bodyPresent.append(String.format("%s;%s;%s;%s;%s", articleEntry.getCode_article(), articleEntry.getCode_barre(), (articleEntry.getQuantite() == null ? 0 : articleEntry.getQuantite()), articleEntry.getPrix_revient(), articleEntry.getStatut()));
+            bodyPresent.append(String.format("%s;%s;%s;%s;%s;%s;%s", articleEntry.getCode_article(), articleEntry.getCode_barre(), (articleEntry.getQuantite() == null ? 0 : articleEntry.getQuantite()), articleEntry.getPrix_revient(), articleEntry.getStatut(), articleEntry.getIntitule(), articleEntry.getMarque()));
             bodyPresent.append("\n\r");
         }
 //        Generation lignes article absents
         for (int i = 0; i < articleEntriesAbsent.size(); i++) {
             ArticleEntry articleEntry = articleEntriesAbsent.get(i);
-            bodyAbsent.append(String.format("%s;%s;%s;%s;%s\n\r", articleEntry.getCode_article(), articleEntry.getCode_barre(), (articleEntry.getQuantite() == null ? 0 : articleEntry.getQuantite()), articleEntry.getPrix_revient(), articleEntry.getStatut()));
+            bodyAbsent.append(String.format("%s;%s;%s;%s;%s;%s;%s\n\r", articleEntry.getCode_article(), articleEntry.getCode_barre(), (articleEntry.getQuantite() == null ? 0 : articleEntry.getQuantite()), articleEntry.getPrix_revient(), articleEntry.getStatut(), articleEntry.getIntitule(), articleEntry.getMarque()));
             bodyAbsent.append("\n\r");
         }
 

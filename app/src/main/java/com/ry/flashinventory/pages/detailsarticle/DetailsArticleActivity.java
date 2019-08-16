@@ -21,10 +21,11 @@ public class DetailsArticleActivity extends AppCompatActivity {
     private ArticleEntry mArticleEntry;
     private List<ZoneEntry> mZoneEntries;
 
-    private TextView mIntituleTV, mCodeArticleTV, mCodeBarreTV, mPrixRevientTV, mQuantiteTV, mZonesTV;
+    private TextView mIntituleTV, mMarqueTV, mCodeArticleTV, mCodeBarreTV, mPrixRevientTV, mQuantiteTV, mZonesTV;
 
     private void initValues() {
         mIntituleTV.setText(this.mArticleEntry.getIntitule());
+        mMarqueTV.setText(this.mArticleEntry.getMarque());
         mCodeArticleTV.setText(this.mArticleEntry.getCode_article());
         mCodeBarreTV.setText(this.mArticleEntry.getCode_barre());
         mPrixRevientTV.setText(String.format("%s XAF", (this.mArticleEntry.getPrix_revient() != null ? this.mArticleEntry.getPrix_revient() : 0)));
@@ -56,6 +57,7 @@ public class DetailsArticleActivity extends AppCompatActivity {
         mDb = AppDatabase.getInstance(getApplicationContext());
 
         mIntituleTV = findViewById(R.id.tv_detailsarticle_intitule);
+        mMarqueTV = findViewById(R.id.tv_detailsarticle_marque);
         mCodeArticleTV = findViewById(R.id.tv_detailsarticle_codearticle);
         mCodeBarreTV = findViewById(R.id.tv_detailsarticle_codebarre);
         mPrixRevientTV = findViewById(R.id.tv_detailsarticle_prixrevient);

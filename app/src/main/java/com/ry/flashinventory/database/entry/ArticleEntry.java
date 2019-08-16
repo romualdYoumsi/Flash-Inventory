@@ -17,6 +17,7 @@ public class ArticleEntry implements Parcelable {
     private String code_article;
     private String code_barre;
     private String intitule;
+    private String marque;
     private String statut;
     private Double prix_revient;
     private Integer quantite;
@@ -91,6 +92,14 @@ public class ArticleEntry implements Parcelable {
         this.intitule_zone = intitule_zone;
     }
 
+    public String getMarque() {
+        return marque;
+    }
+
+    public void setMarque(String marque) {
+        this.marque = marque;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -102,6 +111,7 @@ public class ArticleEntry implements Parcelable {
         dest.writeString(this.code_article);
         dest.writeString(this.code_barre);
         dest.writeString(this.intitule);
+        dest.writeString(this.marque);
         dest.writeString(this.statut);
         dest.writeValue(this.prix_revient);
         dest.writeValue(this.quantite);
@@ -113,6 +123,7 @@ public class ArticleEntry implements Parcelable {
         this.code_article = in.readString();
         this.code_barre = in.readString();
         this.intitule = in.readString();
+        this.marque = in.readString();
         this.statut = in.readString();
         this.prix_revient = (Double) in.readValue(Double.class.getClassLoader());
         this.quantite = (Integer) in.readValue(Integer.class.getClassLoader());

@@ -18,7 +18,7 @@ import com.ry.flashinventory.database.entry.ZoneLineEntry;
  */
 
 @Database(entities = {ArticleEntry.class, ZoneEntry.class, ZoneLineEntry.class},
-        version = 1,
+        version = 2,
         exportSchema = false)
 //@TypeConverters(DateConverter.class)
 public abstract class AppDatabase extends RoomDatabase {

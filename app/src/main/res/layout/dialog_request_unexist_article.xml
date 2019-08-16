@@ -56,11 +56,23 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/et_newarticle_intitule"
+                    android:id="@+id/et_newarticle_designation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords|text|textAutoComplete"
-                    android:hint="Intitulé" />
+                    android:hint="Désignation" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_newarticle_marque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords|text|textAutoComplete"
+                    android:hint="Marque" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -72,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
-                    android:hint="Prix de revient" />
+                    android:hint="Prix de vente" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
